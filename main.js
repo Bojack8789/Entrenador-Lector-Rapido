@@ -1,4 +1,4 @@
-let intervalo;
+ let intervalo;
 let palabras = [];
 let indice = 0;
 let pausado = false;
@@ -12,6 +12,23 @@ function mostrarTexto() {
 
     intervalo = setInterval(renderizarGrupo, tiempoPorPalabra);
 }
+
+function mostrarMain() {
+    // Hacer visible el Main 2
+    document.getElementById("main1").style.display = "none";
+    document.getElementById("main2").style.display = "block";
+    console.log("esta funcion funciona ")
+
+  }
+
+  function cerrarMain2() {
+    // Ocultar el Main 2 y restablecer el input de texto
+    document.getElementById("main2").style.display = "none";
+    document.getElementById("main1").style.display = "block";
+
+
+
+  }
 
 function pausarTexto() {
     pausado = !pausado;
