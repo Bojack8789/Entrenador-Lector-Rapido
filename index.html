@@ -25,29 +25,35 @@
       <!-- MAIN 2 Aqui esta el reproductor que cambia su display para mostrarse sobre el input de arriba -->
 
       <main id="main2" style="display: none;">
+
         <div class="container-render">
 
-            <button id="cerrarBtn" onclick="cerrarMain2()">Cerrar</button>
-
-            <span id="textoRenderizado"></span>
-
-
-
           <div class="container-velocidad">
-            <span id="textoRenderizado"></span>
-            <label for="palabrasPorMinuto">Palabras por minuto:</label>
             <input type="range" id="palabrasPorMinuto" value="100" min="1" max="1000" step="1">
             <span id="valorActual">100</span>
+          </div>          
+
+         
+
+          <div class="container-TextRender">
+            <span id="textoRenderizado"></span> 
           </div>
-          <span id="textoRenderizado"></span>
-          <div class="container-barra">
-            <input type="range" id="progressBar" min="0" max="100" step="1" value="0">
-            <span id="progressText">0%</span>
+
+          <div class="container-cerrarBtn">
+            <button id="cerrarBtn" onclick="cerrarMain2()">Cerrar</button>
           </div>
 
         </div>
       
-        <div class="conteiner-repro">
+    
+
+          <div class="container-barra">
+            <input type="range" id="progressBar" min="0" max="100" step="1" value="0">
+            <span id="progressText">0%</span>
+          </div>
+          
+       <div class="conteiner-repro">
+
           <div class="container-repro-btn">
             <button id="retrocederBtn" class="icon-button-repro">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
