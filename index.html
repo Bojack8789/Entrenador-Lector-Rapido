@@ -17,9 +17,9 @@
 
     <main id="main1" class="main1">
       <div class="container-input">
-      <textarea id="miInput"></textarea>
-      <button id="mostrarBtn" onclick="mostrarTexto(); mostrarMain()">Mostrar Texto</button>
-    </div>
+        <textarea id="texto" rows="5" cols="30" placeholder="Ingresa texto aquí"></textarea>
+        <button id="boton" onclick="mostrarMain()">Click me</button>
+      </div>
     </main>
 
 
@@ -37,7 +37,10 @@
          
 
           <div class="container-TextRender">
-            <span id="textoRenderizado"></span> 
+
+            <div id="container-palabras" class="container-palabra border-box"></div>
+ <!--este es el span dpnde antes se renderizaba , justar a css
+             <span id="textoRenderizado"></span>  -->
           </div>
 
           <div class="container-cerrarBtn">
