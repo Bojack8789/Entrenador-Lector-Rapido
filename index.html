@@ -15,10 +15,11 @@
 
       <!-- MAIN 1 INPUT DE TEXTO -->
 
-    <main id="main1">
-      <input type="text" id="miInput">
-      <button  id="mostrarBtn" onclick="mostrarTexto();mostrarMain()">Mostrar Texto</button>
-      <a href="lector.html">Ir a Lector</a>
+    <main id="main1" class="main1">
+      <div class="container-input">
+        <textarea id="texto" rows="5" cols="30" placeholder="Ingresa texto aquí"></textarea>
+        <button id="boton" onclick="mostrarMain()">Click me</button>
+      </div>
     </main>
 
 
@@ -36,12 +37,21 @@
          
 
           <div class="container-TextRender">
-            <span id="textoRenderizado"></span> 
+
+            <div id="container-palabras" class="container-palabra border-box"></div>
+ <!--este es el span dpnde antes se renderizaba , justar a css
+             <span id="textoRenderizado"></span>  -->
           </div>
 
           <div class="container-cerrarBtn">
-            <button id="cerrarBtn" onclick="cerrarMain2()">Cerrar</button>
-          </div>
+            <button id="cerrarBtn" onclick="cerrarMain2()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" fill="#FFF"/>
+                  <line x1="7" y1="7" x2="17" y2="17" stroke="#FF5722" stroke-width="2"/>
+                  <line x1="7" y1="17" x2="17" y2="7" stroke="#FF5722" stroke-width="2"/>
+              </svg>
+          </button>
+                    </div>
 
         </div>
       
@@ -110,11 +120,11 @@
           <div class="cuadrado alerta"></div>
           <div class="cuadrado feedback-positivo"></div>
           <div class="cuadrado feedback-negativo"></div>
-  Este es un comentario en HTML. Todo lo que esté aquí no se mostrará en la página web. -->
-
+  Este es un comentario en HTML. Todo lo que esté aquí no se mostrará en la página web. 
     <footer>
         <p>Footer</p>
-    </footer>
+    </footer>-->
+
 
 </body>
 </html>

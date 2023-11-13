@@ -23,6 +23,12 @@ header {
     align-items: center;
     justify-content: flex-start;
 }
+body,html{
+    max-width: 100vw  ;
+    height: 100vh;
+    overflow: hidden;
+}
+
 
 header h1 {
     color: red;
@@ -32,16 +38,36 @@ header h1 {
 
 main {
     background-color: rosybrown;
-    width: 100vw;
+    width: 100%;
     height: 90vh;
+}
+
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4% ;
+    width: 100%;
+    height: 100%
+}
+
+#miInput{
+    height: 85%;
+    width: 90%;
+    overflow: scroll;
+}
+
+#mostrarBtn{
+    margin-top: 7%;
+    height: 10%;
+    width: 25%;
 }
 
 .container-render {
     position: static;
-    height: 65%;
+    height: 60%;
     width: 100%;
-    border: 3px solid #000; /* Borde sólido de 1px de color negro (#000) */
-
     display: flex;
     justify-content:flex-start; /* Distribuye los elementos a lo largo del eje principal (horizontal) */
     align-items: center;
@@ -52,16 +78,13 @@ main {
 
 .container-cerrarBtn{
     height: 100%;
-    width: 10%;
+    width: 2%;
     margin: 0%;
-    border: 1px solid #000; /* Borde sólido de 1px de color negro (#000) */
-
 }
 
 .container-TextRender{
-    border: 1px solid #000; /* Borde sólido de 1px de color negro (#000) */
     height: 100%;
-    min-width: 80%;
+    width: 80%;
     margin: 0%;
     display: flex;
     justify-content:center; /* Distribuye los elementos a lo largo del eje principal (horizontal) */
@@ -73,7 +96,6 @@ main {
 .container-barra{
     height: 10%;
     width: 100%;
-    border: 1px solid #000; /* Borde sólido de 1px de color negro (#000) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +105,6 @@ main {
 .container-velocidad{
     height: 80%;
     width: 10%;
-    border: 1px solid #000; /* Borde sólido de 1px de color negro (#000) */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,7 +121,6 @@ main {
 .conteiner-repro{
     height: 25%;
     width: 100%;
-    border: 1px solid #000; /* Borde sólido de 1px de color negro (#000) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,14 +129,61 @@ main {
 #cerrarBtn{
     position: relative;
     top: 3%;
-    left: 85%;
+    left: 3%;
+    border: none; /* Elimina el borde por defecto del botón */
+    background: none; /* Elimina el fondo por defecto del botón */
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre el botón */
+
 }
 
-.container-TextRender{
-    border: 1px solid #000; /* Borde sólido de 1px de color negro (#000) */
 
-    height: 100%;
-    width: 30%;
-    margin: 0%;
-    padding: 0%;
+
+/* aqui iniciaron las modificaciones  */
+
+
+.container {
+    text-align: center;
+    margin-top: 50px;
 }
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* ... (estilos existentes) ... */
+
+.container-palabra {
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 100vw;
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+
+
+.palabra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+    transform: translateY(0);
+    transition: transform 0.01s ease;
+}
+
+.palabra.zoomed{
+    transform: scale(1.2); /* Puedes ajustar el valor de la escala según tus necesidades */
+  }
