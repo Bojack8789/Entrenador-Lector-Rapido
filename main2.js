@@ -144,5 +144,37 @@ document.getElementById("pausaPlaybtn").addEventListener("click", function () {
 //HATA AQUI TODO PERFECTO ! 
 
 
-//SCALA 
+//SCALA  y color 
+//solo esta funcionando color 
 
+
+
+
+ 
+  
+let palabras = document.getElementsByClassName("palabra");
+
+containerPalabras.addEventListener('scroll', function () {
+  // Obtener la posición del centro del contenedor
+  let containerHeight = containerPalabras.clientHeight;
+  let containerScrollTop = containerPalabras.scrollTop;
+  let containerCenter = containerHeight / 1.5;
+
+  // Iterar sobre los elementos hijos
+  for (let i = 0; i < palabras.length; i++) {
+    let palabra = palabras[i];
+
+    // Obtener la posición del elemento hijo relativa al contenedor
+    let palabraTop = palabra.offsetTop - containerScrollTop;
+    let palabraBottom = palabraTop + palabra.clientHeight;
+
+    // Verificar si el elemento hijo está en la posición del medio del contenedor
+    if (palabraTop <= containerCenter && palabraBottom >= containerCenter) {
+      // Cambiar el color del elemento hijo
+      palabra.style.color = 'red'; // Puedes ajustar el color según tus preferencias
+    } else {
+      // Restaurar el color original del elemento hijo
+      palabra.style.color = ''; // Esto elimina el estilo de color, volviendo al original
+    }
+  }
+});

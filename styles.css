@@ -182,8 +182,14 @@ button {
     z-index: 1;
     transform: translateY(0);
     transition: transform 0.01s ease;
+    transition: transform 0.3s ease; /* Transición suave para el escalado */
 }
 
-.palabra.zoomed{
-    transform: scale(1.2); /* Puedes ajustar el valor de la escala según tus necesidades */
+
+.escala-1 {
+    transform: scale(1);
+  }
+
+  .escala-1-5 {
+    transform: scale(1.5);
   }
